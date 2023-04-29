@@ -48,7 +48,7 @@ var Routes = map[verbs.Verb]map[string]*HttpRoute{
 	verbs.PATCH:   {},
 }
 
-func Define(verb verbs.Verb, path string) *HttpRoute {
+func Http(verb verbs.Verb, path string) *HttpRoute {
 	var loc codeLocation
 	_, loc.file, loc.line, _ = runtime.Caller(1)
 

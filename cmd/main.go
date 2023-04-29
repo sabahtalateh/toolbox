@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"github.com/sabahtalateh/toolbox"
-	"github.com/sabahtalateh/toolbox/di/constructor"
+	"github.com/sabahtalateh/toolbox/di/component"
 	"github.com/sabahtalateh/toolbox/di/inject"
 	"github.com/sabahtalateh/toolbox/http/request"
 	"github.com/sabahtalateh/toolbox/http/response"
@@ -34,15 +34,15 @@ type Conf1 Conf
 type Conf2 Conf
 
 func init() {
-	route.Define(verbs.GET, "/item/{id1}/{id1}/{id3}").
+	route.Http(verbs.GET, "/item/{id1}/{id1}/{id3}").
 		Func(Handle).
 		Func(Handle2).
 		BindPathParam("a", "b").
 		BindPathParam("a", "A")
 
-	route.Define(verbs.GET, "/item/{hello}/{world}/{!}")
+	route.Http(verbs.GET, "/item/{hello}/{world}/{!}")
 
-	constructor.Register[Srv1](NewSrv1).Name("SRV111")
+	component.Register[Srv1](NewSrv1).Name("SRV111")
 }
 
 type Srv1 struct {

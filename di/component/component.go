@@ -1,4 +1,4 @@
-package constructor
+package component
 
 type Component[T any] struct {
 	t *T
