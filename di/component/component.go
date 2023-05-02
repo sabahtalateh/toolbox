@@ -4,7 +4,7 @@ type Component[T any] struct {
 	t *T
 }
 
-func Register[T any](_ any) *Component[T] {
+func Register[T any](_ func() *T) *Component[T] {
 	return &Component[T]{}
 }
 
