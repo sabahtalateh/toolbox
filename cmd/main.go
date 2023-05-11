@@ -42,7 +42,7 @@ func init() {
 
 	route.Http(verbs.GET, "/item/{hello}/{world}/{!}")
 
-	component.Register[Srv1](NewSrv1).Name("SRV111")
+	component.Component[Srv1](NewSrv1).Name("SRV111")
 }
 
 type Srv1 struct {
