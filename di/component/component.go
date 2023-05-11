@@ -4,7 +4,7 @@ type DiComponent[T any] struct {
 	t *T
 }
 
-func Component[T any](_ any) *DiComponent[T] {
+func Constructor[T any](_ any) *DiComponent[T] {
 	return &DiComponent[T]{}
 }
 
