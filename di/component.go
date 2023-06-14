@@ -1,16 +1,26 @@
 package di
 
+type сomponent struct {
+}
+
 // Component
 //
 // Parameter is a function returning structure or interface
-// Following parameters are "value-functions"
-func Component(_ any, _ ...any) {
+func Component(_ any) *сomponent {
+	return nil
 }
 
 // NamedComponent
 //
 // First parameter is a component name
 // Second parameter is a function returning structure or interface
-// Following parameters are "value-functions"
-func NamedComponent(_ string, _ any, _ ...any) {
+func NamedComponent(_ string, _ any) *сomponent {
+	return nil
+}
+
+// Value
+//
+// First parameter is a parameter name
+// Second parameter is a function providing corresponding value
+func (d *сomponent) Value(_ string, _ any) {
 }
