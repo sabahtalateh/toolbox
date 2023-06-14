@@ -13,7 +13,7 @@ func Component(_ any) *сomponent {
 // Name
 //
 // Specify component name
-func Name(_ string) *сomponent {
+func (d *сomponent) Name(_ string) *сomponent {
 	return nil
 }
 
