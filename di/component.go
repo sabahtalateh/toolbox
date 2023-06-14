@@ -10,11 +10,10 @@ func Component(_ any) *сomponent {
 	return nil
 }
 
-// NamedComponent
+// Name
 //
-// First parameter is a component name
-// Second parameter is a function returning structure or interface
-func NamedComponent(_ string, _ any) *сomponent {
+// Specify component name
+func Name(_ string) *сomponent {
 	return nil
 }
 
@@ -22,5 +21,6 @@ func NamedComponent(_ string, _ any) *сomponent {
 //
 // First parameter is a parameter name
 // Second parameter is a function providing corresponding value
-func (d *сomponent) Value(_ string, _ any) {
+func (d *сomponent) Value(_ string, _ any) *сomponent {
+	return nil
 }
