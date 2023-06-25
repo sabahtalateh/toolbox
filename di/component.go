@@ -21,6 +21,6 @@ func (d *сomponent) Name(_ string) *сomponent {
 //
 // First parameter is a component constructor function parameter name
 // Following parameters are functions returning components, structures or interfaces
-func (d *сomponent) With(_ string, _ ...any) *сomponent {
+func (d *сomponent) With(_ string, _ any, _ ...any) *сomponent {
 	return nil
 }
