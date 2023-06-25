@@ -17,10 +17,10 @@ func (d *сomponent) Name(_ string) *сomponent {
 	return nil
 }
 
-// Value
+// With
 //
-// First parameter is a parameter name
-// Second parameter is a function providing corresponding value
-func (d *сomponent) Value(_ string, _ any) *сomponent {
+// First parameter is a component constructor function parameter name
+// Following parameters are functions returning components, structures or interfaces
+func (d *сomponent) With(_ string, _ ...any) *сomponent {
 	return nil
 }

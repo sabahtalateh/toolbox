@@ -2,14 +2,14 @@ package main
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/sabahtalateh/toolbox"
-	"github.com/sabahtalateh/toolbox/di/component"
 	"github.com/sabahtalateh/toolbox/di/inject"
 	"github.com/sabahtalateh/toolbox/http/request"
 	"github.com/sabahtalateh/toolbox/http/response"
 	"github.com/sabahtalateh/toolbox/http/route"
 	"github.com/sabahtalateh/toolbox/http/verbs"
-	"net/http"
 )
 
 func main() {
@@ -42,7 +42,7 @@ func init() {
 
 	route.Http(verbs.GET, "/item/{hello}/{world}/{!}")
 
-	component.Component[Srv1](NewSrv1).Name("SRV111")
+	// component.Component[Srv1](NewSrv1).Name("SRV111")
 }
 
 type Srv1 struct {
