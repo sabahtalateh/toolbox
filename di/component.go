@@ -1,19 +1,19 @@
 package di
 
-type сomponent struct {
+type С struct {
 }
 
 // Component
 //
 // Parameter is a function returning structure or interface
-func Component(_ any) *сomponent {
+func Component(_ any) *С {
 	return nil
 }
 
 // Name
 //
 // Specify component name
-func (d *сomponent) Name(_ string) *сomponent {
+func (d *С) Name(_ string) *С {
 	return nil
 }
 
@@ -21,6 +21,6 @@ func (d *сomponent) Name(_ string) *сomponent {
 //
 // First parameter is a component constructor function parameter name
 // Following parameters are functions returning components, structures or interfaces
-func (d *сomponent) With(_ string, _ any, _ ...any) *сomponent {
+func (d *С) With(_ string, _ any, _ ...any) *С {
 	return nil
 }
