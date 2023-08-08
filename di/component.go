@@ -1,26 +1,40 @@
 package di
 
-type С struct {
-}
+type С[T any] struct{}
 
-// Component
-//
-// Parameter is a function returning structure or interface
-func Component(_ any) *С {
+func Component[T any](_ any) *С[T] {
 	return nil
 }
 
-// Name
-//
-// Specify component name
-func (d *С) Name(_ string) *С {
+func NamedComponent[T any](_ string, _ any) *С[T] {
 	return nil
 }
 
-// With
-//
-// First parameter is a component constructor function parameter name
-// Following parameters are functions returning components, structures or interfaces
-func (d *С) With(_ string, _ any, _ ...any) *С {
+func Auto[T any]() T {
+	var t T
+	return t
+}
+
+type Type[T any] struct {
+	t T
+}
+
+func OfType[T any]() *Type[T] {
+	return nil
+}
+
+func (t *Type[T]) Named(string, ...string) *Type[T] {
+	return nil
+}
+
+func (t *Type[T]) First() T {
+	return t.t
+}
+
+func (t *Type[T]) All() []T {
+	return nil
+}
+
+func (t *Type[T]) Implementing() []T {
 	return nil
 }
