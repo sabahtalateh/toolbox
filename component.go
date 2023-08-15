@@ -19,7 +19,7 @@ func (d *С) Name(_ string) *С {
 
 // With
 //
-// First parameter is a component constructor function parameter name
+// get parameter is a component constructor function parameter name
 // Following parameters are functions returning components, structures or interfaces
 func (d *С) With(_ string, _ any, _ ...any) *С {
 	return nil
